@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Autoescuela BIANCO | EcoBianco Albacete · Permisos, CAP y Formación</title>
+  <meta name="description" content="Autoescuela Bianco (EcoBianco) en Calle Feria 129-131, Albacete. Permiso B, clases de reciclaje, CAP, ADR, cursos subvencionados y formación para empresas.">
+
+  <!-- Favicon Oficial -->
+  <link rel="icon" type="image/png" href="assets/images/brand/favicon.png">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Autoescuela BIANCO | EcoBianco Albacete">
+  <meta property="og:description" content="Centro de formación vial junto al Recinto Ferial de Albacete. Permiso B, Reciclaje, CAP, Mercancías Peligrosas y Formación para Empresas.">
+  <meta property="og:image" content="assets/images/hero/hero-desktop.jpeg">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0047BF">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       BIANCO (ECOBIANCO ALBACETE) DESIGN SYSTEM
+       Paleta extraída do Dossiê: Primária #0047BF | Eco #54840E | CTA #29B503
+       ========================================================================== */
+    :root {
+      --bg-deep: #00399E;
+      --canvas-bg: #F7F9FC;
+      --surface-soft: #EEF3FA;
+      --card-bg: #FFFFFF;
+      --border-soft: #DCE4F0;
+      --border-strong: #C3D0E3;
+
+      --brand-primary: #0047BF;
+      --brand-primary-hover: #003594;
+      --brand-dark: #0F172A;
+      --brand-eco: #54840E;
+      --cta-green: #29B503;
+      --cta-green-hover: #219602;
+      --whatsapp-green: #25D366;
+      --whatsapp-green-hover: #1EB856;
+      --warm-amber: #D98218;
+
+      --text-dark: #111827;
+      --text-body: #374151;
+      --text-muted: #6B7280;
+      --text-light: #9CA3AF;
+
+      --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: 'Instrument Serif', Georgia, serif;
+
+      --radius-card: 28px;
+      --radius-banner: 22px;
+      --radius-pill: 9999px;
+      --shadow-canvas: 0 25px 60px -15px rgba(15, 23, 42, 0.18), 0 0 0 1px rgba(255, 255, 255, 0.85);
+      --shadow-hover: 0 18px 36px rgba(0, 71, 191, 0.10);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-family: var(--font-main);
+      color: var(--text-dark);
+      background-color: var(--bg-deep);
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* Fundo Arquitetônico Canelado em Azul Oficial Bianco */
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      background-color: var(--bg-deep);
+      background-image: repeating-linear-gradient(
+        to right,
+        #00328C 0px,
+        #003DA8 18px,
+        #0047BF 38px,
+        #0D56D1 52px,
+        #1A65E0 60px,
+        #0A50C7 70px,
+        #003FA8 86px,
+        #00328C 100px
+      );
+      background-attachment: fixed;
+      background-size: 100px 100%;
+      padding: 1rem 0.5rem 3rem;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 50% 15%, rgba(255, 255, 255, 0.14) 0%, rgba(0, 24, 72, 0.35) 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Letreiro Monumental Translúcido */
+    .hero-watermark-title {
+      position: relative;
+      z-index: 1;
+      font-size: clamp(3.2rem, 14vw, 10.5rem);
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.16);
+      text-shadow: 0 4px 28px rgba(0, 20, 65, 0.28);
+      text-align: center;
+      letter-spacing: 0.02em;
+      line-height: 0.9;
+      margin-top: 1rem;
+      margin-bottom: -2.2rem;
+      pointer-events: none;
+      user-select: none;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .drivepro-container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Card Principal */
+    .main-canvas-card {
+      background: var(--canvas-bg);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-canvas);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      padding: 2rem;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      animation: cardAppear 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* ==========================================================================
+       NAVBAR
+       ========================================================================== */
+    .card-navbar {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border-bottom: 1px solid var(--border-soft);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.2rem;
+      position: relative;
+    }
+
+    .navbar-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 1rem;
+    }
+
+    .brand-group {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(135deg, #003594 0%, #0047BF 100%);
+      padding: 0.45rem 0.95rem;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0, 71, 191, 0.22);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .brand-group:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(0, 71, 191, 0.30);
+    }
+
+    .brand-logo-img {
+      height: 36px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .navbar-right-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .desktop-nav-wrap {
+      display: none;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      list-style: none;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-body);
+    }
+    .nav-links a {
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover {
+      color: var(--brand-primary);
+    }
+
+    .nav-tel-link {
+      display: none;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--brand-primary);
+      padding: 0.55rem 0.9rem;
+      border-radius: var(--radius-pill);
+      background: var(--surface-soft);
+      border: 1px solid var(--border-soft);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    .nav-tel-link:hover {
+      background: #E2EAF6;
+      border-color: var(--border-strong);
+    }
+
+    .pill-btn-green {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      background-color: var(--cta-green);
+      color: #FFFFFF;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 0.72rem 1.35rem;
+      border-radius: var(--radius-pill);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px rgba(41, 181, 3, 0.30);
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    .pill-btn-green:hover {
+      background-color: var(--cta-green-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(41, 181, 3, 0.40);
+    }
+
+    /* Botão Hamburguesa Mobile */
+    .mobile-menu-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      width: 40px;
+      height: 40px;
+      background: var(--surface-soft);
+      border: 1px solid var(--border-strong);
+      border-radius: 10px;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.2s ease;
+      flex-shrink: 0;
+    }
+    .mobile-menu-btn:hover {
+      background: #E2EAF6;
+    }
+    .mobile-menu-btn span {
+      width: 20px;
+      height: 2px;
+      background-color: var(--text-dark);
+      border-radius: 2px;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+    .mobile-menu-btn.active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .mobile-menu-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .mobile-menu-btn.active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Drawer Mobile */
+    .mobile-drawer {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 1rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--border-soft);
+      animation: menuDrawerFade 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    .mobile-drawer.open {
+      display: flex;
+    }
+    @keyframes menuDrawerFade {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .mobile-nav-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      width: 100%;
+    }
+    .mobile-nav-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0.65rem;
+      font-size: 0.94rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      border-radius: 10px;
+      transition: all 0.2s ease;
+      border-bottom: 1px solid rgba(220, 228, 240, 0.7);
+    }
+    .mobile-nav-item:hover {
+      background: var(--surface-soft);
+      color: var(--brand-primary);
+      transform: translateX(3px);
+    }
+    .mobile-nav-item svg {
+      color: var(--text-light);
+    }
+    .mobile-drawer-btn {
+      margin-top: 1rem;
+      width: 100%;
+      padding: 0.85rem 1.25rem;
+      font-size: 0.92rem;
+    }
+
+    /* ==========================================================================
+       HERO BANNER
+       ========================================================================== */
+    .hero-banner-wrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    .hero-banner {
+      width: 100%;
+      min-height: 490px;
+      border-radius: var(--radius-banner);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2.5rem;
+      background: #0F172A;
+      border: 1px solid var(--border-strong);
+    }
+
+    .hero-banner picture {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-banner-bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(0.95) contrast(1.04);
+      transition: transform 0.8s ease;
+    }
+    .hero-banner:hover .hero-banner-bg {
+      transform: scale(1.03);
+    }
+
+    .hero-banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.82) 0%, rgba(15, 23, 42, 0.28) 38%, rgba(15, 23, 42, 0) 68%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-banner-content {
+      position: relative;
+      z-index: 2;
+      max-width: 580px;
+    }
+
+    .hero-banner-title {
+      font-size: clamp(2rem, 4.4vw, 3.35rem);
+      font-weight: 900;
+      color: #FFFFFF;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin-bottom: 0;
+      text-shadow: 0 3px 18px rgba(0, 0, 0, 0.55);
+      animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+    }
+    .hero-banner-title em {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-style: italic;
+      color: #A3E635;
+      font-size: 1.08em;
+    }
+
+    .hero-banner-desc {
+      font-size: clamp(0.95rem, 1.7vw, 1.1rem);
+      color: rgba(248, 250, 252, 0.92);
+      line-height: 1.55;
+      margin-bottom: 1.85rem;
+      font-weight: 500;
+      animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+    }
+
+    .hero-banner-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+    }
+
+    .btn-hero-courses {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background-color: var(--cta-green);
+      color: #FFFFFF;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 0.78rem 1.45rem;
+      border-radius: var(--radius-pill);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 14px rgba(41, 181, 3, 0.45);
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    .btn-hero-courses:hover {
+      background-color: var(--cta-green-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-hero-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #FFFFFF;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 0.76rem 1.35rem;
+      border-radius: var(--radius-pill);
+      backdrop-filter: blur(8px);
+      transition: all 0.2s ease;
+    }
+    .btn-hero-secondary:hover {
+      background: rgba(255, 255, 255, 0.24);
+    }
+
+    /* Prova Social Flutuante */
+    .social-proof-pill {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 0.6rem 1.15rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.28);
+      animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+    }
+    .proof-badge-logo {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .proof-text-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+    }
+    .proof-title {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      line-height: 1.15;
+      white-space: nowrap;
+    }
+    .proof-stars {
+      font-size: 0.74rem;
+      color: var(--warm-amber);
+      font-weight: 800;
+      line-height: 1.15;
+      white-space: nowrap;
+    }
+
+    /* ==========================================================================
+       FRANJA DE ESTADÍSTICAS
+       ========================================================================== */
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-soft);
+    }
+    .stat-box {
+      background: var(--surface-soft);
+      border: 1px solid var(--border-soft);
+      border-radius: 14px;
+      padding: 1.1rem 0.75rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+      transition: all 0.25s ease;
+    }
+    .stat-box:hover {
+      background: var(--card-bg);
+      border-color: var(--border-strong);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 71, 191, 0.06);
+    }
+    .stat-num {
+      font-size: 1.65rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-body);
+      font-weight: 600;
+      line-height: 1.25;
+    }
+
+    /* ==========================================================================
+       SECCIONES GENERALES
+       ========================================================================== */
+    .section-block {
+      margin-top: 3.5rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border-soft);
+    }
+
+    .section-header-center {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 2.25rem;
+    }
+    .section-eyebrow {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--brand-primary);
+      background: var(--surface-soft);
+      border: 1px solid var(--border-soft);
+      padding: 0.28rem 0.75rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: 0.65rem;
+    }
+    .section-headline {
+      font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+      font-weight: 900;
+      color: var(--text-dark);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+    .section-subtext {
+      color: var(--text-body);
+      font-size: 0.95rem;
+      margin-top: 0.55rem;
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       GRID DE PERMISOS Y CURSOS (6 CARDS DETALHADOS)
+       ========================================================================== */
+    .courses-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.4rem;
+    }
+
+    .course-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 20px;
+      padding: 1.65rem;
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .course-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--brand-primary);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .course-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+    .course-icon-box {
+      width: 46px;
+      height: 46px;
+      border-radius: 13px;
+      background: var(--surface-soft);
+      border: 1px solid var(--border-soft);
+      color: var(--brand-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .course-icon-box.eco {
+      background: rgba(84, 132, 14, 0.12);
+      border-color: rgba(84, 132, 14, 0.25);
+      color: var(--brand-eco);
+    }
+    .course-tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: var(--brand-primary);
+      background: var(--surface-soft);
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
+    }
+    .course-tag.eco {
+      color: var(--brand-eco);
+      background: rgba(84, 132, 14, 0.12);
+    }
+
+    .course-title {
+      font-size: 1.22rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      line-height: 1.25;
+      margin-bottom: 0.4rem;
+    }
+    .course-desc {
+      font-size: 0.9rem;
+      color: var(--text-body);
+      line-height: 1.55;
+      margin-bottom: 0.75rem;
+    }
+    .course-meta-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .course-meta-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .course-meta-list svg {
+      color: var(--cta-green);
+      flex-shrink: 0;
+    }
+
+    .course-card-footer {
+      padding-top: 0.95rem;
+      border-top: 1px solid var(--border-soft);
+    }
+    .btn-course-wa {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      gap: 0.45rem;
+      background: var(--brand-primary);
+      color: #FFFFFF;
+      font-size: 0.86rem;
+      font-weight: 700;
+      padding: 0.75rem 1.15rem;
+      border-radius: var(--radius-pill);
+      transition: all 0.2s ease;
+    }
+    .btn-course-wa:hover {
+      background: var(--brand-primary-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 71, 191, 0.28);
+    }
+    .btn-course-wa.green {
+      background: var(--cta-green);
+    }
+    .btn-course-wa.green:hover {
+      background: var(--cta-green-hover);
+      box-shadow: 0 6px 16px rgba(41, 181, 3, 0.30);
+    }
+
+    /* ==========================================================================
+       EL MÉTODO BIANCO (3 PASOS) & DIFERENCIALES
+       ========================================================================== */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.4rem;
+    }
+    .step-card {
+      background: var(--surface-soft);
+      border: 1px solid var(--border-soft);
+      border-radius: 18px;
+      padding: 1.75rem;
+      transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    }
+    .step-card:hover {
+      background: var(--card-bg);
+      border-color: var(--border-strong);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    }
+    .step-num {
+      width: 38px;
+      height: 38px;
+      background: var(--brand-primary);
+      color: #FFFFFF;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.88rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .step-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 0.45rem;
+    }
+    .step-text {
+      font-size: 0.9rem;
+      color: var(--text-body);
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       INSTALACIONES Y FLOTA (FOTOS REALES DE ASSETS)
+       ========================================================================== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    .gallery-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+      display: flex;
+      flex-direction: column;
+    }
+    .gallery-img-wrap {
+      height: 300px;
+      overflow: hidden;
+      background: #0F172A;
+    }
+    .gallery-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+    .gallery-card:hover .gallery-img-wrap img {
+      transform: scale(1.04);
+    }
+    .gallery-caption {
+      padding: 1.1rem 1.25rem;
+    }
+    .gallery-caption h3 {
+      font-size: 1.02rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 0.25rem;
+    }
+    .gallery-caption p {
+      font-size: 0.85rem;
+      color: var(--text-body);
+      line-height: 1.45;
+    }
+
+    /* ==========================================================================
+       SECCIÓN DE RESEÑAS EN GOOGLE (ESTILO SHOWCASE CARRUSEL)
+       ========================================================================== */
+    .testimonial-showcase-wrapper {
+      max-width: 840px;
+      margin: 2rem auto 0;
+      position: relative;
+      padding: 0 24px;
+    }
+    .testimonial-showcase-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border-soft);
+      border-radius: 24px;
+      padding: 3.25rem 2.5rem 2.5rem;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 12px 35px -5px rgba(15, 23, 42, 0.07);
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .testim-big-quote-icon {
+      margin-bottom: 1.25rem;
+      color: var(--border-strong);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .testim-big-quote-icon svg {
+      width: 42px;
+      height: 42px;
+      fill: currentColor;
+    }
+    .testim-slides-container {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .testim-slide {
+      display: none;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.45s ease, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      width: 100%;
+    }
+    .testim-slide.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+      animation: testimFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    @keyframes testimFadeIn {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .testim-quote-paragraph {
+      font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+      line-height: 1.65;
+      font-weight: 500;
+      color: var(--text-dark);
+      max-width: 680px;
+      margin: 0 auto 1.75rem;
+    }
+    .testim-author-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .testim-avatar-img {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      border: 3px solid var(--card-bg);
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.14), 0 0 0 2px var(--border-strong);
+    }
+    .testim-author-name {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--text-dark);
+    }
+    .testim-author-sub {
+      font-size: 0.8rem;
+      color: var(--warm-amber);
+      font-weight: 700;
+    }
+    .testim-indicators {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.85rem;
+    }
+    .testim-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 9999px;
+      background: var(--border-strong);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .testim-dot.active {
+      width: 28px;
+      background: var(--brand-primary);
+    }
+    .testim-nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--card-bg);
+      border: 1px solid var(--border-strong);
+      color: var(--text-body);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+      transition: all 0.2s ease;
+      z-index: 10;
+    }
+    .testim-nav-arrow:hover {
+      background: var(--surface-soft);
+      color: var(--brand-primary);
+      transform: translateY(-50%) scale(1.06);
+    }
+    .testim-arrow-prev { left: -21px; }
+    .testim-arrow-next { right: -21px; }
+
+    .testim-maps-link-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.35rem;
+    }
+    .testim-maps-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--brand-primary);
+      font-size: 0.88rem;
+      font-weight: 700;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+    .testim-maps-link:hover {
+      color: var(--brand-primary-hover);
+      transform: translateX(2px);
+    }
+
+    @media (max-width: 900px) {
+      .testim-nav-arrow {
+        display: none !important;
+      }
+      .testimonial-showcase-wrapper {
+        padding: 0;
+      }
+      .testimonial-showcase-box {
+        padding: 2.25rem 1.25rem 1.85rem;
+        min-height: auto;
+        border-radius: 18px;
+      }
+    }
+
+    /* ==========================================================================
+       CONTACTO Y UBICACIÓN
+       ========================================================================== */
+    .contact-card-banner {
+      margin-top: 3.5rem;
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-banner);
+      padding: 3rem 2.5rem;
+      color: #F8FAFC;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+      box-shadow: 0 18px 40px -10px rgba(15, 23, 42, 0.40);
+    }
+    .contact-banner-title {
+      font-size: clamp(1.6rem, 3.2vw, 2.25rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 0.65rem;
+      color: #FFFFFF;
+    }
+    .contact-banner-desc {
+      color: rgba(248, 250, 252, 0.84);
+      font-size: 0.94rem;
+      line-height: 1.55;
+      margin-bottom: 1.5rem;
+      max-width: 540px;
+    }
+    .contact-info-clean {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .contact-info-row {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    }
+    .contact-info-row:last-child {
+      border-bottom: none;
+    }
+    .contact-row-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(0, 71, 191, 0.35);
+      border: 1px solid rgba(96, 165, 250, 0.45);
+      color: #93C5FD;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-row-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .contact-row-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.35;
+    }
+    .contact-row-title a {
+      color: #FFFFFF;
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 255, 255, 0.4);
+    }
+    .contact-row-sub {
+      font-size: 0.77rem;
+      color: #CBD5E1;
+      font-weight: 500;
+    }
+
+    .contact-banner-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: stretch;
+      width: 100%;
+    }
+    .contact-btn-wa {
+      padding: 0.95rem 1.5rem;
+      font-size: 0.92rem;
+      width: 100%;
+    }
+    .btn-maps-high-contrast {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.10);
+      border: 1.5px solid rgba(255, 255, 255, 0.32);
+      color: #FFFFFF;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 0.85rem 1.5rem;
+      border-radius: var(--radius-pill);
+      transition: all 0.2s ease;
+      width: 100%;
+    }
+    .btn-maps-high-contrast:hover {
+      background: rgba(255, 255, 255, 0.20);
+      border-color: #FFFFFF;
+    }
+
+    /* Footer */
+    .card-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      align-items: center;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .footer-social-links {
+      display: flex;
+      align-items: center;
+      gap: 1.15rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-social-links a {
+      color: var(--brand-primary);
+      font-weight: 700;
+    }
+    .footer-social-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Botão Flutuante WhatsApp */
+    .mobile-float-wa {
+      position: fixed;
+      bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+      right: 16px;
+      z-index: 1000;
+      background-color: var(--whatsapp-green);
+      color: #FFFFFF;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.35), 0 0 0 3px #FFFFFF;
+      transition: transform 0.2s ease;
+      animation: pulseRipple 2.5s infinite;
+    }
+    .mobile-float-wa:hover {
+      transform: scale(1.08);
+      background-color: var(--whatsapp-green-hover);
+    }
+    .mobile-float-wa svg {
+      width: 28px;
+      height: 28px;
+      fill: currentColor;
+    }
+
+    /* Animações */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes heroFadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes cardAppear { from { opacity: 0; transform: translateY(28px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    @keyframes pulseRipple {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55); }
+      70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    /* ==========================================================================
+       RESPONSIVIDAD
+       ========================================================================== */
+    @media (max-width: 767px) {
+      .hero-watermark-title {
+        font-size: clamp(2.8rem, 16vw, 4.6rem);
+        margin-top: 0.75rem;
+        margin-bottom: 0.35rem;
+      }
+      body {
+        padding: 0.45rem 0.35rem calc(2rem + env(safe-area-inset-bottom, 0px));
+      }
+      .main-canvas-card {
+        padding: 1.15rem 0.85rem;
+        border-radius: 18px;
+      }
+      .brand-logo-img {
+        height: 30px;
+      }
+      .desktop-nav-wrap,
+      .navbar-right-actions .desktop-only-cta,
+      .nav-tel-link {
+        display: none !important;
+      }
+      .hero-banner-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+      }
+      .hero-banner {
+        min-height: 380px;
+        padding: 1.5rem 1.15rem;
+        border-radius: 16px;
+        justify-content: flex-end;
+      }
+      .hero-banner::after {
+        background: linear-gradient(to top, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.45) 55%, rgba(15, 23, 42, 0.10) 100%);
+      }
+      .hero-banner-title {
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+      }
+      .hero-banner-desc,
+      .desktop-hero-actions {
+        display: none !important;
+      }
+      .hero-mobile-actions {
+        display: flex !important;
+        width: 100%;
+      }
+      .btn-hero-mobile-cta {
+        width: 100%;
+        justify-content: center;
+        padding: 0.88rem 1.25rem;
+        border-radius: 14px;
+      }
+      .hero-banner-wrapper .social-proof-pill {
+        position: static;
+        width: 100%;
+        justify-content: center;
+      }
+      .stats-strip {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.65rem;
+        margin-top: 1.25rem;
+      }
+      .section-block {
+        margin-top: 2.25rem;
+        padding-top: 1.75rem;
+      }
+      .contact-card-banner {
+        padding: 1.6rem 1.1rem;
+        border-radius: 16px;
+      }
+      .card-footer {
+        padding-bottom: 4.5rem;
+      }
+    }
+
+    @media (min-width: 640px) {
+      .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .courses-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .mobile-menu-btn,
+      .mobile-drawer,
+      .hero-mobile-actions {
+        display: none !important;
+      }
+      .desktop-nav-wrap,
+      .nav-tel-link {
+        display: flex;
+      }
+      .navbar-right-actions .desktop-only-cta {
+        display: inline-flex !important;
+      }
+      .contact-card-banner {
+        grid-template-columns: 1.35fr 1fr;
+      }
+      .card-footer {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .hero-banner-wrapper .social-proof-pill {
+        position: absolute;
+        bottom: 24px;
+        right: 24px;
+        z-index: 3;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Letrero Monumental Translúcido -->
+  <div class="hero-watermark-title" aria-hidden="true">BIANCO</div>
+
+  <div class="drivepro-container">
+    <div class="main-canvas-card">
+
+      <!-- ====================================================================
+           1. HEADER / NAVBAR
+           ==================================================================== -->
+      <header class="card-navbar">
+        <div class="navbar-header-row">
+          <a href="#" class="brand-group" aria-label="Autoescuela Bianco Inicio">
+            <img src="assets/images/brand/logo.png" alt="Logotipo oficial Autoescuela Bianco Albacete" class="brand-logo-img">
+          </a>
+
+          <nav aria-label="Navegación principal" class="desktop-nav-wrap">
+            <ul class="nav-links">
+              <li><a href="#cursos">Permisos y Cursos</a></li>
+              <li><a href="#metodo">El Método</a></li>
+              <li><a href="#instalaciones">Instalaciones</a></li>
+              <li><a href="#opiniones">Reseñas</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </nav>
+
+          <div class="navbar-right-actions">
+            <a href="tel:+34647008200" class="nav-tel-link" aria-label="Llamar al 647 00 82 00">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>647 00 82 00</span>
+            </a>
+
+            <a href="https://wa.me/34647008200?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20matr%C3%ADcula%2C%20horarios%20y%20precios%20para%20el%20Permiso%20B%20en%20Autoescuela%20Bianco."
+               class="pill-btn-green desktop-only-cta"
+               target="_blank"
+               rel="noopener noreferrer">
+              Matrícula WhatsApp
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="mobile-drawer" id="mobileDrawer">
+          <nav class="mobile-nav-list">
+            <a href="#cursos" class="mobile-nav-item">
+              <span>Permisos y Cursos</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a href="#metodo" class="mobile-nav-item">
+              <span>El Método Bianco</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a href="#instalaciones" class="mobile-nav-item">
+              <span>Instalaciones y Flota</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a href="#opiniones" class="mobile-nav-item">
+              <span>Reseñas en Google (4,3 ★)</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <a href="#contacto" class="mobile-nav-item">
+              <span>Ubicación y Horarios</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </nav>
+
+          <a href="https://wa.me/34647008200?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20matr%C3%ADcula%2C%20horarios%20y%20precios%20para%20el%20Permiso%20B%20en%20Autoescuela%20Bianco."
+             class="pill-btn-green mobile-drawer-btn"
+             target="_blank"
+             rel="noopener noreferrer">
+            <span>Hablar por WhatsApp</span>
+          </a>
+        </div>
+      </header>
+
+      <!-- ====================================================================
+           2. HERO SECTION
+           ==================================================================== -->
+      <div class="hero-banner-wrapper">
+        <section class="hero-banner" id="hero">
+          <picture>
+            <source media="(max-width: 767px)" srcset="assets/images/hero/hero-mobile.png">
+            <img src="assets/images/hero/hero-desktop.jpeg"
+                 alt="Peugeot 2008 de Autoescuela EcoBianco en Albacete con placa L"
+                 class="hero-banner-bg"
+                 loading="eager">
+          </picture>
+
+          <div class="hero-banner-content">
+            <h1 class="hero-banner-title">
+              Tu carnet en Albacete.<br><em>Conduce con confianza.</em>
+            </h1>
+          </div>
+        </section>
+
+        <div class="social-proof-pill">
+          <img src="assets/images/brand/favicon.png" alt="Emblema Autoescuela Bianco" class="proof-badge-logo">
+          <div class="proof-text-wrap">
+            <span class="proof-title">Autoescuela EcoBianco Albacete</span>
+            <span class="proof-stars">★★★★☆ 4,3 / 5 Google (+20 reseñas)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           FRANJA DE ESTADÍSTICAS
+           ==================================================================== -->
+      <div class="stats-strip reveal">
+        <div class="stat-box">
+          <span class="stat-num" style="color: var(--warm-amber);">4,3 ★</span>
+          <span class="stat-label">Valoración en Google</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num" style="color: var(--brand-primary);">Permiso B</span>
+          <span class="stat-label">Teórica y Prácticas</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num" style="color: var(--brand-eco);">CAP · ADR</span>
+          <span class="stat-label">Formación Profesional</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num" style="color: var(--cta-green);">FUNDAE</span>
+          <span class="stat-label">Empresas y Subvencionados</span>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           3. CATÁLOGO DE PERMISOS Y CURSOS
+           ==================================================================== -->
+      <section class="section-block" id="cursos">
+        <div class="section-header-center reveal">
+          <span class="section-eyebrow">Formación Vial y Profesional</span>
+          <h2 class="section-headline">Permisos de Conducir y Cursos</h2>
+          <p class="section-subtext">
+            Desde tu primer Permiso B hasta formación bonificada para empresas, clases de reciclaje y transporte profesional en Albacete.
+          </p>
+        </div>
+
+        <div class="courses-grid">
+          <!-- CARD 1: PERMISO B -->
+          <article class="course-card reveal">
+            <div>
+              <div class="course-card-top">
+                <div class="course-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+                </div>
+                <span class="course-tag">Matrícula Abierta</span>
+              </div>
+              <h3 class="course-title">Permiso B (Coche)</h3>
+              <p class="course-desc">
+                Prepárate para el examen teórico con nuestra Zona de Alumnos online y realiza tus clases prácticas por Albacete en nuestra flota moderna EcoBianco.
+              </p>
+              <ul class="course-meta-list">
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Test de examen DGT online</span></li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Vehículos modernos Peugeot 2008</span></li>
+              </ul>
+            </div>
+            <div class="course-card-footer">
+              <a href="https://wa.me/34647008200?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20matr%C3%ADcula%2C%20horarios%20y%20precios%20para%20el%20Permiso%20B%20en%20Autoescuela%20Bianco."
+                 class="btn-course-wa green" target="_blank" rel="noopener noreferrer">
+                <span>Consultar / Pedir Precio</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 2: CLASES DE RECICLAJE -->
+          <article class="course-card reveal">
+            <div>
+              <div class="course-card-top">
+                <div class="course-icon-box eco">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                </div>
+                <span class="course-tag eco">Conducción Segura</span>
+              </div>
+              <h3 class="course-title">Clases de Reciclaje</h3>
+              <p class="course-desc">
+                ¿Llevas tiempo sin conducir o quieres repasar normas y señales? Recupera la confianza al volante y aprende técnicas de conducción eficiente.
+              </p>
+              <ul class="course-meta-list">
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Adaptado a tu nivel y ritmo</span></li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Prácticas urbanas y estacionamiento</span></li>
+              </ul>
+            </div>
+            <div class="course-card-footer">
+              <a href="https://wa.me/34647008200?text=Hola%2C%20ya%20tengo%20el%20carnet%20y%20me%20interesan%20clases%20de%20reciclaje%20para%20volver%20a%20conducir%20con%20seguridad."
+                 class="btn-course-wa" target="_blank" rel="noopener noreferrer">
+                <span>Consultar Clases de Reciclaje</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 3: MOTOCICLETAS -->
+          <article class="course-card reveal">
+            <div>
+              <div class="course-card-top">
+                <div class="course-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2"/></svg>
+                </div>
+                <span class="course-tag">Dos Ruedas</span>
+              </div>
+              <h3 class="course-title">Permisos de Moto</h3>
+              <p class="course-desc">
+                Orientación y preparación para permisos de motocicleta. Consulta con nuestro centro en Calle Feria la disponibilidad de grupos y requisitos DGT.
+              </p>
+              <ul class="course-meta-list">
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Asesoramiento personalizado</span></li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Gestión integral de exámenes</span></li>
+              </ul>
+            </div>
+            <div class="course-card-footer">
+              <a href="https://wa.me/34647008200?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20permisos%20de%20moto%20en%20Autoescuela%20Bianco."
+                 class="btn-course-wa" target="_blank" rel="noopener noreferrer">
+                <span>Consultar Disponibilidad</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 4: CAP Y ADR -->
+          <article class="course-card reveal">
+            <div>
+              <div class="course-card-top">
+                <div class="course-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5"/><path d="M14 17h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+                </div>
+                <span class="course-tag">Transporte Profesional</span>
+              </div>
+              <h3 class="course-title">CAP y Mercancías Peligrosas (ADR)</h3>
+              <p class="course-desc">
+                Cursos orientados a conductores profesionales para la obtención y renovación del Certificado de Aptitud Profesional (CAP) y autorizaciones ADR.
+              </p>
+              <ul class="course-meta-list">
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Próximas convocatorias CAP</span></li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Formación específica ADR</span></li>
+              </ul>
+            </div>
+            <div class="course-card-footer">
+              <a href="https://wa.me/34647008200?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20pr%C3%B3ximas%20convocatorias%20de%20CAP%2C%20ADR%20o%20formaci%C3%B3n%20bonificada%20para%20empresas."
+                 class="btn-course-wa" target="_blank" rel="noopener noreferrer">
+                <span>Consultar Convocatorias</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 5: FORMACIÓN EMPRESAS Y SUBVENCIONADOS -->
+          <article class="course-card reveal">
+            <div>
+              <div class="course-card-top">
+                <div class="course-icon-box eco">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                </div>
+                <span class="course-tag eco">FUNDAE · SEPECAM</span>
+              </div>
+              <h3 class="course-title">Formación para Empresas y Subvencionados</h3>
+              <p class="course-desc">
+                Centro de formación con opciones de cursos subvencionados y planes de formación bonificada a través de FUNDAE para trabajadores y empresas.
+              </p>
+              <ul class="course-meta-list">
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Formación bonificada FUNDAE</span></li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Cursos subvencionados</span></li>
+              </ul>
+            </div>
+            <div class="course-card-footer">
+              <a href="https://wa.me/34647008200?text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre%20cursos%20subvencionados%20y%20formaci%C3%B3n%20bonificada%20FUNDAE%20para%20empresas."
+                 class="btn-course-wa" target="_blank" rel="noopener noreferrer">
+                <span>Solicitar Información</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- CARD 6: CONSULTAS DGT Y PUNTOS -->
+          <article class="course-card reveal">
+            <div>
+              <div class="course-card-top">
+                <div class="course-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                </div>
+                <span class="course-tag">Asesoría DGT</span>
+              </div>
+              <h3 class="course-title">Consultas DGT y Puntos</h3>
+              <p class="course-desc">
+                Te orientamos en trámites ante la Dirección General de Tráfico: consulta de puntos, notas de examen DGT y opciones para recuperación de puntos.
+              </p>
+              <ul class="course-meta-list">
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Consulta de saldo de puntos y notas</span></li>
+                <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Información sobre cursos de puntos</span></li>
+              </ul>
+            </div>
+            <div class="course-card-footer">
+              <a href="https://wa.me/34647008200?text=Hola%2C%20quiero%20consultar%20disponibilidad%20y%20fechas%20para%20cursos%20de%20recuperaci%C3%B3n%20de%20puntos%20DGT."
+                 class="btn-course-wa" target="_blank" rel="noopener noreferrer">
+                <span>Consultar Puntos DGT</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           4. EL MÉTODO BIANCO (DIFERENCIAIS)
+           ==================================================================== -->
+      <section class="section-block" id="metodo">
+        <div class="section-header-center reveal">
+          <span class="section-eyebrow">Por Qué Elegirnos</span>
+          <h2 class="section-headline">El Método Autoescuela Bianco</h2>
+          <p class="section-subtext">
+            Combinamos cercanía en el trato, organización en tus trámites DGT y una flota moderna para que aprendas a conducir con seguridad.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card reveal">
+            <div class="step-num">01</div>
+            <h3 class="step-title">Zona de Alumnos Online</h3>
+            <p class="step-text">
+              Accede a tu cuenta de alumno para completar tu formación teórica y realizar test de examen DGT desde cualquier lugar y a tu ritmo.
+            </p>
+          </div>
+
+          <div class="step-card reveal">
+            <div class="step-num">02</div>
+            <h3 class="step-title">Flota Moderna EcoBianco</h3>
+            <p class="step-text">
+              Realiza tus clases prácticas por Albacete en vehículos modernos y confortables (Peugeot 2008) con profesores pacientes y trato cercano.
+            </p>
+          </div>
+
+          <div class="step-card reveal">
+            <div class="step-num">03</div>
+            <h3 class="step-title">Ubicación y Horario Amplio</h3>
+            <p class="step-text">
+              Estamos en Calle de la Feria nº 129-131, junto al Recinto Ferial, con atención presencial continua de lunes a viernes por la mañana y por la tarde.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           5. INSTALACIONES Y ALUMNOS APROBADOS (ASSETS REALES)
+           ==================================================================== -->
+      <section class="section-block" id="instalaciones">
+        <div class="section-header-center reveal">
+          <span class="section-eyebrow">Centro Físico y Aprobados</span>
+          <h2 class="section-headline">Nuestras Instalaciones y Alumnos</h2>
+          <p class="section-subtext">
+            Ven a visitarnos junto al Pincho de la Feria y celebra tu aprobado con tu placa L de Autoescuela Bianco.
+          </p>
+        </div>
+
+        <div class="gallery-grid reveal">
+          <article class="gallery-card">
+            <div class="gallery-img-wrap">
+              <img src="assets/images/installations/fachada-calle-feria.png"
+                   alt="Fachada de Autoescuela Bianco Centro de Formación en Calle Feria Albacete"
+                   loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <h3>Fachada en Calle Feria, 129-131</h3>
+              <p>Centro de Formación, Academia, Formación para Empresas y Autoescuela junto al Recinto Ferial.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-img-wrap">
+              <img src="assets/images/students/alumnos-aprobados-01.png"
+                   alt="Dos alumnos aprobados con su placa L en Autoescuela Bianco Albacete"
+                   loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <h3>Alumnos con su Placa 'L'</h3>
+              <p>Nuevos conductores que ya han conseguido su permiso de conducir en nuestro centro.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <div class="gallery-img-wrap">
+              <img src="assets/images/students/alumno-aprobado-02.png"
+                   alt="Alumno aprobado celebrando con su placa L de Autoescuela Bianco"
+                   loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <h3>Aprobados en Albacete</h3>
+              <p>Acompañamiento cercano desde la teórica hasta el día del examen práctico DGT.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           6. PROVA SOCIAL / RESEÑAS EN GOOGLE (CARRUSEL ESTILO FLEMING)
+           ==================================================================== -->
+      <section class="section-block" id="opiniones">
+        <div class="section-header-center reveal">
+          <h2 class="section-headline">Lo que Dicen Nuestros Alumnos</h2>
+          <p class="section-subtext">Opiniones reales en Google de quienes ya se formaron con nosotros en Albacete (4,3 ★ · +20 reseñas).</p>
+        </div>
+
+        <div class="testimonial-showcase-wrapper reveal">
+          <div class="testimonial-showcase-box" id="testimonialBox">
+
+            <div class="testim-big-quote-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+              </svg>
+            </div>
+
+            <div class="testim-slides-container">
+              <div class="testim-slide active" data-index="0">
+                <p class="testim-quote-paragraph">
+                  "Uno de los aspectos más destacados por los alumnos en Albacete es la excelente relación calidad-precio para sacarse el Permiso B, con una formación accesible, clara y cercana."
+                </p>
+                <div class="testim-author-wrap">
+                  <img src="assets/images/students/alumnos-aprobados-01.png" alt="Alumnos aprobados en Autoescuela Bianco" class="testim-avatar-img">
+                  <h3 class="testim-author-name">Relación Calidad-Precio · Permiso B</h3>
+                  <span class="testim-author-sub">★★★★☆ 4,3 / 5 · Reseñas en Google</span>
+                </div>
+              </div>
+
+              <div class="testim-slide" data-index="1">
+                <p class="testim-quote-paragraph">
+                  "Profesores y personal administrativo muy valorados por su profesionalidad, paciencia en las clases prácticas y el trato cercano que transmite confianza desde el primer día."
+                </p>
+                <div class="testim-author-wrap">
+                  <img src="assets/images/students/alumno-aprobado-02.png" alt="Alumno aprobado con su placa L en Autoescuela Bianco" class="testim-avatar-img">
+                  <h3 class="testim-author-name">Trato Cercano y Paciencia Docente</h3>
+                  <span class="testim-author-sub">★★★★☆ 4,3 / 5 · Reseñas en Google</span>
+                </div>
+              </div>
+
+              <div class="testim-slide" data-index="2">
+                <p class="testim-quote-paragraph">
+                  "Buena organización interna y acompañamiento claro en la gestión de trámites y convocatorias de examen ante la DGT, junto al Recinto Ferial de Albacete."
+                </p>
+                <div class="testim-author-wrap">
+                  <img src="assets/images/brand/favicon.png" alt="Emblema Autoescuela Bianco Albacete" class="testim-avatar-img">
+                  <h3 class="testim-author-name">Organización y Trámites DGT</h3>
+                  <span class="testim-author-sub">★★★★☆ 4,3 / 5 · Reseñas en Google</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="testim-nav-arrow testim-arrow-prev" id="testimPrevBtn" aria-label="Opinión anterior">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="testim-nav-arrow testim-arrow-next" id="testimNextBtn" aria-label="Siguiente opinión">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+
+            <div class="testim-indicators" id="testimDots">
+              <button class="testim-dot active" data-slide="0" aria-label="Ir a opinión 1"></button>
+              <button class="testim-dot" data-slide="1" aria-label="Ir a opinión 2"></button>
+              <button class="testim-dot" data-slide="2" aria-label="Ir a opinión 3"></button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="testim-maps-link-wrap">
+          <a href="https://www.google.com/maps/place/Autoescuela+EcoBianco+Albacete/@38.9959808,-1.8870751,15z/data=!4m10!1m2!2m1!1sautoescuela!3m6!1s0xd665fb5d870a8cd:0x576b965fa2a0e4ce!8m2!3d38.9959808!4d-1.8680207!15sCgthdXRvZXNjdWVsYVoNIgthdXRvZXNjdWVsYZIBFnRyYW5zcG9ydGF0aW9uX3NlcnZpY2WaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMjVDVlZvd1pFcFdWbXhLVTBaRmRGZEViRU5VTVVadldYcEtkbVF3UlJBQuABAPoBBAgAEEg!16s%2Fg%2F11zftwkjb0?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="testim-maps-link">
+            <span>Ver todas las reseñas en Google Maps</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           7. UBICACIÓN, HORARIOS Y CONTACTO
+           ==================================================================== -->
+      <section class="contact-card-banner reveal" id="contacto">
+        <div>
+          <h2 class="contact-banner-title">Empieza hoy en Autoescuela Bianco</h2>
+          <p class="contact-banner-desc">
+            ¿Quieres consultar horarios, tarifas del Permiso B o convocatorias CAP? Pásate por nuestra secretaría en Calle Feria o escríbenos por WhatsApp.
+          </p>
+
+          <div class="contact-info-clean">
+            <div class="contact-info-row">
+              <span class="contact-row-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              </span>
+              <div class="contact-row-text">
+                <span class="contact-row-title">Calle de la Feria, nº 129 - 131</span>
+                <span class="contact-row-sub">02004 / 02005 Albacete · Junto al Recinto Ferial (Barrio de Fátima)</span>
+              </div>
+            </div>
+
+            <div class="contact-info-row">
+              <span class="contact-row-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              </span>
+              <div class="contact-row-text">
+                <span class="contact-row-title">
+                  <a href="tel:+34647008200">+34 647 00 82 00</a> · <a href="tel:+34967663368">967 66 33 68</a>
+                </span>
+                <span class="contact-row-sub">Móvil / WhatsApp y Teléfono fijo · centrosbianco@gmail.com</span>
+              </div>
+            </div>
+
+            <div class="contact-info-row">
+              <span class="contact-row-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+              </span>
+              <div class="contact-row-text">
+                <span class="contact-row-title">Lunes a Viernes: 09:00–13:30 y 16:00–21:00</span>
+                <span class="contact-row-sub">Horario habitual de atención en secretaría</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-banner-actions">
+          <a href="https://wa.me/34647008200?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20matr%C3%ADcula%2C%20horarios%20y%20precios%20en%20Autoescuela%20Bianco."
+             class="pill-btn-green contact-btn-wa"
+             target="_blank"
+             rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.21 8.21 0 0 1-5.82 2.41h-.01c-1.42 0-2.82-.37-4.06-1.08l-.29-.17-3.11.82.83-3.03-.19-.3a8.196 8.196 0 0 1-1.26-4.47c0-4.54 3.7-8.25 8.24-8.25m4.52 11.66c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.88.86-.88 2.09 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.71 4.3 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.18-.47-.3"/></svg>
+            <span>Hablar por WhatsApp</span>
+          </a>
+
+          <a href="https://www.google.com/maps/place/Autoescuela+EcoBianco+Albacete/@38.9959808,-1.8870751,15z/data=!4m10!1m2!2m1!1sautoescuela!3m6!1s0xd665fb5d870a8cd:0x576b965fa2a0e4ce!8m2!3d38.9959808!4d-1.8680207!15sCgthdXRvZXNjdWVsYVoNIgthdXRvZXNjdWVsYZIBFnRyYW5zcG9ydGF0aW9uX3NlcnZpY2WaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMjVDVlZvd1pFcFdWbXhLVTBaRmRGZEViRU5VTVVadldYcEtkbVF3UlJBQuABAPoBBAgAEEg!16s%2Fg%2F11zftwkjb0?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn-maps-high-contrast">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623" style="flex-shrink:0;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Ver en Google Maps</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           8. FOOTER
+           ==================================================================== -->
+      <footer class="card-footer">
+        <p>© <span id="year">2026</span> Autoescuela BIANCO (EcoBianco) · Calle de la Feria, 129 - 131, Albacete.</p>
+        <div class="footer-social-links">
+          <a href="mailto:centrosbianco@gmail.com">centrosbianco@gmail.com</a>
+          <a href="https://www.instagram.com/autoescuelabiancoalbacetee/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="#cursos">Permisos</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       BOTÓN FLOTANTE DE WHATSAPP
+       ====================================================================== -->
+  <a href="https://wa.me/34647008200?text=Hola%2C%20quiero%20hacer%20una%20consulta%20en%20Autoescuela%20Bianco%20Albacete."
+     class="mobile-float-wa"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contactar por WhatsApp con Autoescuela Bianco">
+    <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.83a8.21 8.21 0 0 1-5.82 2.41h-.01c-1.42 0-2.82-.37-4.06-1.08l-.29-.17-3.11.82.83-3.03-.19-.3a8.196 8.196 0 0 1-1.26-4.47c0-4.54 3.7-8.25 8.24-8.25m4.52 11.66c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.44.06-.66.31-.23.25-.88.86-.88 2.09 0 1.24.9 2.44 1.03 2.61.12.17 1.77 2.71 4.3 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.18-.47-.3"/></svg>
+  </a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const yr = document.getElementById('year');
+      if (yr) yr.textContent = new Date().getFullYear();
+
+      const menuBtn = document.getElementById('mobileMenuBtn');
+      const drawer = document.getElementById('mobileDrawer');
+      if (menuBtn && drawer) {
+        menuBtn.addEventListener('click', function () {
+          const isOpen = drawer.classList.contains('open');
+          drawer.classList.toggle('open');
+          menuBtn.classList.toggle('active');
+          menuBtn.setAttribute('aria-expanded', !isOpen);
+        });
+
+        drawer.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            drawer.classList.remove('open');
+            menuBtn.classList.remove('active');
+            menuBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      const reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+        reveals.forEach(el => revealObserver.observe(el));
+      } else {
+        reveals.forEach(el => el.classList.add('active'));
+      }
+
+      const testimSlides = document.querySelectorAll('.testim-slide');
+      const testimDots = document.querySelectorAll('.testim-dot');
+      const testimPrevBtn = document.getElementById('testimPrevBtn');
+      const testimNextBtn = document.getElementById('testimNextBtn');
+      const testimBox = document.getElementById('testimonialBox');
+
+      if (testimSlides.length > 0) {
+        let currentTestimIndex = 0;
+        let testimTimer = null;
+        const totalTestim = testimSlides.length;
+
+        function showTestim(index) {
+          if (index < 0) index = totalTestim - 1;
+          if (index >= totalTestim) index = 0;
+          currentTestimIndex = index;
+
+          testimSlides.forEach((slide, idx) => {
+            slide.classList.toggle('active', idx === index);
+          });
+          testimDots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === index);
+          });
+        }
+
+        function nextTestim() { showTestim(currentTestimIndex + 1); }
+        function prevTestim() { showTestim(currentTestimIndex - 1); }
+        function startAutoPlay() {
+          stopAutoPlay();
+          testimTimer = setInterval(nextTestim, 4800);
+        }
+        function stopAutoPlay() {
+          if (testimTimer) {
+            clearInterval(testimTimer);
+            testimTimer = null;
+          }
+        }
+
+        startAutoPlay();
+
+        if (testimBox) {
+          testimBox.addEventListener('mouseenter', stopAutoPlay);
+          testimBox.addEventListener('mouseleave', startAutoPlay);
+
+          let touchStartX = 0;
+          testimBox.addEventListener('touchstart', e => {
+            stopAutoPlay();
+            touchStartX = e.changedTouches[0].screenX;
+          }, { passive: true });
+          testimBox.addEventListener('touchend', e => {
+            const touchEndX = e.changedTouches[0].screenX;
+            if (touchStartX - touchEndX > 45) nextTestim();
+            else if (touchEndX - touchStartX > 45) prevTestim();
+            startAutoPlay();
+          }, { passive: true });
+        }
+
+        if (testimPrevBtn) testimPrevBtn.addEventListener('click', () => { prevTestim(); startAutoPlay(); });
+        if (testimNextBtn) testimNextBtn.addEventListener('click', () => { nextTestim(); startAutoPlay(); });
+        testimDots.forEach((dot, idx) => {
+          dot.addEventListener('click', () => { showTestim(idx); startAutoPlay(); });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
